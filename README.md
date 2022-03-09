@@ -1,5 +1,5 @@
-# Grupo-1.12
-## Agricultura familiar
+# Grupo 12 - Agricultura familiar
+
 1. Lucas Almeida
 1. Matheus Pantrigo
 1. Vinícius de Figueiredo Trindade
