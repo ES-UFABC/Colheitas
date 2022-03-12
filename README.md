@@ -1,4 +1,4 @@
-# Grupo 12 - Colheitas 🌱
+# Colheitas 🌱 - Grupo 12
 ```sh
 - Isaque Lopes Campello
 - Lucas Venâncio de Almeida
