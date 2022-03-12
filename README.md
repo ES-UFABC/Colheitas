@@ -10,7 +10,7 @@
 
 # Apresentação:
 ```sh
-A solução apresentada neste projeto busca facilitar e democratizar o acesso a alimentos de pequenos produtores agrícolas.
+A solução deste projeto busca facilitar e democratizar o acesso a alimentos de produtores agrícolas.
 
 Serão levantados os seguintes dados dos produtores agrícolas:
 - Sua localização
