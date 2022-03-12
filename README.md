@@ -1,4 +1,4 @@
-# Grupo 12 - Agricultura familiar
+# Grupo 12 - Colheitas
 ```sh
 - Isaque Lopes Campello
 - Lucas Venâncio de Almeida
