@@ -23,6 +23,9 @@ Ou então, buscar pelo tipo de alimento de seu interesse e/ou época de colheita
 Facilitando assim, o contado direto entre o produtor agrícola e consumidor.
 ```
 
+# Tecnologias utilizadas:
+Nós vamos implementar o projeto utilizano python. Para isto, nós utilizaremos o framework Django. A base de dados que nós utilizaremos será o MySql. Eventualmente podemos utilizar o Heroku como _host_ do projeto.
+
 # Como baixar:
 ```sh
 > Em desenvolvimento...
