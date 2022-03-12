@@ -19,7 +19,8 @@ Serão levantados os seguintes dados dos produtores agrícolas:
 - Meio de contato
 
 Com esses dados os consumidores poderão buscar em nossa solução os produtores agrícolas mais próximos.
-Também poderão buscar por tipo de alimento e época de colheita, obetendo o contato direto do produtor. 
+Ou então, buscar pelo tipo de alimento de seu interesse e/ou época de colheita.
+Facilitando assim, o contado direto entre o produtor agrícola e consumidor.
 ```
 
 # Como baixar:
