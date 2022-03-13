@@ -53,4 +53,4 @@ Eventualmente podemos utilizar o Heroku como _host_ do projeto.
 > Em desenvolvimento...
 ```
 # Licensa:
-Este projeto está debaixo da Licensa do MIT
+Este projeto está debaixo da [Licensa do MIT](LICENSE)
