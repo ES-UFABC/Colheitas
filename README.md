@@ -10,7 +10,7 @@
 
 ## Sobre o projeto:
 
-Com mudanças diversas ocorrendo na maneira que as pessoas compram alimentos, principalmente devido à pandemida, os pequenos agricultores acabaram sofrendo muito, assim como os seus clientes. Neste sentido, se torna necessário uma solução que permita o contato direto entre consumidor e produtor, e este projeto busca justamente solucionar este promela: facilitar e democratizar o acesso a alimentos de pequenos produtores agrícolas.
+Com mudanças diversas ocorrendo na maneira que as pessoas compram alimentos, principalmente devido à pandemida, os pequenos agricultores acabaram sofrendo muito, assim como os seus clientes. Neste sentido, se torna necessário uma solução que permita o contato direto entre consumidor e produtor, e este projeto busca justamente solucionar este problema: facilitar e democratizar o acesso a alimentos de pequenos produtores agrícolas.
 Neste sentido, esta aplicação web permitira que consumiores tenham acesso direto à alimentos produzidos por pequenos agricultores em sua região.
 
 ## Funcionaliades principais:
