@@ -54,3 +54,5 @@ Eventualmente podemos utilizar o Heroku como _host_ do projeto.
 ```
 # Licensa:
 Este projeto está debaixo da [Licensa do MIT](LICENSE)
+
+![example workflow](https://github.com/ES-UFABC/Colheitas/actions/workflows/blank.yml/badge.svg)
