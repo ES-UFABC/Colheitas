@@ -52,3 +52,5 @@ Eventualmente podemos utilizar o Heroku como _host_ do projeto.
 ```sh
 > Em desenvolvimento...
 ```
+# Licensa:
+Este projeto está debaixo da Licensa do MIT
