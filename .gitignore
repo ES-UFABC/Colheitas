@@ -1,3 +1,5 @@
 venv/
 colheitas/db.sqlite3
 __pycache__/
+/.vs/Colheitas/v17/.suo
+/.vs
