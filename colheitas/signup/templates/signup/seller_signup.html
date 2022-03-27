@@ -1,3 +1,4 @@
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,10 +9,8 @@
         <p>
             Para que você possa começar a vender seus produtos diretamente para consumidores perto de você, por favor complete o seu cadastro preenchendo os campos abaixo
         </p>
-
-        <input type="text", id="nome", name="nome", value="João da Silva">
-        <label for="nome">Nome completo</label> 
-
+        {% crispy form form.helper %}
+        <button type="submit">Enviar</button>
         <button type="comprador">
             <a href="/signup/">Voltar</a>
         </button>
