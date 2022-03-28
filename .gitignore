@@ -4,3 +4,4 @@ __pycache__/
 /.vs/Colheitas/v17/.suo
 /.vs
 colheitas/colheitas/settings.py
+colheitas/./migrations
