@@ -5,10 +5,22 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-  Hi {{ user.username }}!
-  <p><a href="{% url 'logout' %}">Log Out</a></p>
+  <p>
+    Bem vindo a Colheitas {{ user.username }}! Este app ainda está sendo construído, então espere um pouco :)
+  </p>
+
+  <button type="comprador">
+    <a href="{% url 'logout' %}">Sair</a>
+  </button>
+
 {% else %}
-  <p>You are not logged in</p>
-  <a href="{% url 'login' %}">Log In</a>
+  <p>Bem vindo à Colheitas, o serviço que conecta pequenos produtores agrícolas com consumidores de maneira rápida, fácil, e direta!</p>
+  <button type="comprador">
+    <a href="{% url 'login' %}">Entrar</a>
+  </button>
+
+  <button type="comprador">
+    <a href="{% url 'signup' %}">Cadastre-se</a>
+  </button>
 {% endif %}
 {% endblock %}
