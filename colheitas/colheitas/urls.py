@@ -16,16 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from django.views.generic.base import TemplateView
-from accounts.views import seller
+import accounts
+# from accounts.views import seller, buyer
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
     # path('', include('landing_page.urls')),
-    # path("accounts/", include("accounts.urls")),
+    path("accounts/", include("accounts.urls")),
     # path('signup/', include('signup.urls')),    
     path('admin/', admin.site.urls),
-    path('accounts/', include("django.contrib.auth.urls")),
-    # path('accounts/signup/', include("django.contrib.auth.urls")),
-    path('accounts/signup/seller/', seller.SellerSignUpView.as_view(), name='seller_signup'),
-    # path('accounts/signup/buyer/', include("django.contrib.auth.urls"))
+    # path('accounts/', include("django.contrib.auth.urls")), 
+    # path('accounts/signup/', include('accounts.urls')),
+    # path('accounts/signup/seller/', seller.SellerSignUpView.as_view(), name='seller_signup'),
+    # path('accounts/signup/buyer/', buyer.BuyerSignUpView.as_view(), name='buyer_signup'),
 ]

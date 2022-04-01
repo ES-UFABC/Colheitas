@@ -13,17 +13,17 @@
     Estado: {{ user.state }}
   </p>
 
-  <button type="comprador">
+  <button type="button">
     <a href="{% url 'logout' %}">Sair</a>
   </button>
 
 {% else %}
   <p>Bem vindo à Colheitas, o serviço que conecta pequenos produtores agrícolas com consumidores de maneira rápida, fácil, e direta!</p>
-  <button type="comprador">
+  <button type="button">
     <a href="{% url 'login' %}">Entrar</a>
   </button>
 
-  <button type="comprador">
+  <button type="button">
     <a href="{% url 'signup' %}">Cadastre-se</a>
   </button>
 {% endif %}

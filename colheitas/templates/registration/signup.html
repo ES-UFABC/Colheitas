@@ -1,13 +1,21 @@
-<!-- templates/registration/signup.html -->
-{% extends "base.html" %}
-
-{% block title %}Sign Up{% endblock %}
-
-{% block content %}
-  <h2>Sign up</h2>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Sign Up</button>
-  </form>
-{% endblock %} 
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Colheitas sign up</title>
+    </head>
+    <body>
+        <p>
+            Você gostaria de se cadastrar como um comprador ou um vendedor?
+        </p>
+        <button type="button">  
+            <a href="/accounts/signup/buyer/">Comprador</a>
+        </button>
+        <button type="button">
+            <a href="/accounts/signup/seller/">Vendedor</a>
+        </button>
+        <button type="button">
+            <a href="/">Voltar</a>
+        </button>
+    </body>
+</html>

@@ -5,15 +5,15 @@ from django.views import generic
 from django.contrib.auth import login
 from django.shortcuts import redirect
 
-from ..forms import SellerSignUpForm
-from ..models import User, Seller
+from ..forms import BuyerSignUpForm
+from ..models import User
 
-class SellerSignUpView(generic.CreateView):
+class BuyerSignUpView(generic.CreateView):
     model = User
-    form_class = SellerSignUpForm
+    form_class = BuyerSignUpForm
     
     success_url = reverse_lazy("login")
-    template_name = "registration/signup_seller.html"
+    template_name = "registration/signup_buyer.html"
 
     # def get_context_data(self, **kwargs):
     #     kwargs['user_type'] = 'seller'

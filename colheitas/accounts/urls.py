@@ -1,8 +1,13 @@
 from django.urls import path
+from django.urls import include, path
 
-from .views import SignUpView
+# from .views import SignUpView
+from accounts.views import seller, buyer, signup
 
 
 urlpatterns = [
-    path("signup/", SignUpView.as_view(), name="signup"),
+    path('', include("django.contrib.auth.urls")),
+    path("signup/", signup.SignUpView, name="signup"),
+    path('signup/seller/', seller.SellerSignUpView.as_view(), name='seller_signup'),
+    path('signup/buyer/', buyer.BuyerSignUpView.as_view(), name='buyer_signup'),
 ]
