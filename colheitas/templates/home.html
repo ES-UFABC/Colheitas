@@ -9,6 +9,10 @@
     Bem vindo a Colheitas {{ user.username }}! Este app ainda está sendo construído, então espere um pouco :)
   </p>
 
+  <p>
+    Estado: {{ user.state }}
+  </p>
+
   <button type="comprador">
     <a href="{% url 'logout' %}">Sair</a>
   </button>
