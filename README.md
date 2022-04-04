@@ -2,7 +2,7 @@
 
 - Isaque Lopes Campello
 - Lucas Venâncio de Almeida
-- Lucas Ribeiro
+- Lucas Ribeiro Carneiro
 - Matheus Pantrigo
 - Vinícius de Figueiredo Trindade
 
@@ -28,12 +28,12 @@ Com esses dados os consumidores poderão buscar em nossa solução os produtores
 # Tecnologias utilizadas:
 ## Back-end:
 Nós vamos implementar o projeto utilizano Python, com o framework Django. 
-A base de dados que nós utilizaremos será o MySql.
+A base de dados que nós utilizaremos será o SQlite.
 Eventualmente podemos utilizar o Heroku como _host_ do projeto.
 
 <img src="https://static.djangoproject.com/img/logos/django-logo-positive.svg" width="200">
 
-<img src="https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg" width="150">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/SQLite370.svg/382px-SQLite370.svg.png?20140602232932" width="150">
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Heroku_logo.svg" width="200">
 
