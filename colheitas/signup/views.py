@@ -18,4 +18,4 @@ def seller_signup(request):
             form.save()
 
     form = SellerForm()
-    return render(request, 'signup/seller_signup.html', {'form': form})
+    return render(request, 'signup/seller.signup.html', {'form': form})

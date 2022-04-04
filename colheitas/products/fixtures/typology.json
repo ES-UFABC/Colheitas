@@ -1,0 +1,93 @@
+[
+  {
+    "model": "products.Typology",
+    "pk": 1,
+    "fields": {
+      "name": "Desconhecida"
+    }
+  },
+  {
+    "model": "products.Typology",
+    "pk": 2,
+    "fields": {
+      "name": "Agroindústria"
+    }
+  },
+  {
+    "model": "products.Typology",
+    "pk": 3,
+    "fields": {
+      "name": "Apicultura"
+    }
+  },
+  {
+    "model": "products.Typology",
+    "pk": 4,
+    "fields": {
+      "name": "Cereais"
+    }
+  },
+  {
+    "model": "products.Typology",
+    "pk": 5,
+    "fields": {
+      "name": "Fruticultura perene"
+    }
+  },
+  {
+    "model": "products.Typology",
+    "pk": 6,
+    "fields": {
+      "name": "Hortaliças"
+    }
+  },
+  {
+    "model": "products.Typology",
+    "pk": 7,
+    "fields": {
+      "name": "Laticínios e derivados"
+    }
+  },
+  {
+    "model": "products.Typology",
+    "pk": 8,
+    "fields": {
+      "name": "Proteína de origem animal"
+    }
+  },
+  {
+    "model": "products.Typology",
+    "pk": 9,
+    "fields": {
+      "name": "Raizes e origem animal"
+    }
+  },
+  {
+    "model": "products.Typology",
+    "pk": 10,
+    "fields": {
+      "name": "Refeições"
+    }
+  },
+  {
+    "model": "products.Typology",
+    "pk": 11,
+    "fields": {
+      "name": "Sementes e Mudas"
+    }
+  },
+  {
+    "model": "products.Typology",
+    "pk": 12,
+    "fields": {
+      "name": "Fruticultura Ciclo Médio"
+    }
+  },
+  {
+    "model": "products.Typology",
+    "pk": 13,
+    "fields": {
+      "name": "Fruticultura Ciclo Curto"
+    }
+  }
+]

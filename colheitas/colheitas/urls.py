@@ -25,6 +25,7 @@ urlpatterns = [
     path("accounts/", include("accounts.urls")),
     # path('signup/', include('signup.urls')),    
     path('admin/', admin.site.urls),
+    path('products/', include("products.urls")),
     # path('accounts/', include("django.contrib.auth.urls")), 
     # path('accounts/signup/', include('accounts.urls')),
     # path('accounts/signup/seller/', seller.SellerSignUpView.as_view(), name='seller_signup'),

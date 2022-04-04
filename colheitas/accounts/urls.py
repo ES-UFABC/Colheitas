@@ -2,7 +2,7 @@ from django.urls import path
 from django.urls import include, path
 
 # from .views import SignUpView
-from accounts.views import seller, buyer, signup
+from .views import seller, buyer, signup
 
 
 urlpatterns = [
