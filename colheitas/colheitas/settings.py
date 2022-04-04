@@ -35,7 +35,6 @@ INSTALLED_APPS = [
     # 'signup',
     'crispy_forms',
     'accounts',
-    'landing_page.apps.LandingPageConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
