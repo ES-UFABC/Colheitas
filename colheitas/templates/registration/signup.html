@@ -1,21 +1,83 @@
 <!DOCTYPE html>
 <html>
     <head>
+
         <meta charset="utf-8">
-        <title>Colheitas sign up</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">        
+        <title>Colheitas 🌱 - Sign Up</title>
+
+        <style>
+            .imagem2 {
+                background-image: url(produtos_01.jpg);
+                background-position: center;
+            }
+
+            body {
+                text-align: center;
+                background: url(produtos_0.jpg);
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            a {
+                font-size: 16px;
+                text-decoration: double;
+                color:#fff
+            }
+
+            button {
+                display: inline-block;
+                padding: 5px 15px;
+                font-size: 15px;
+                cursor: pointer;
+                text-align: center;	
+                color: #fff;
+                background-color: #228B22;
+                border: none;
+                border-radius: 100px;
+                box-shadow: 0 2px #999;
+            }
+
+            footer {
+                font-size: 13px;
+            }
+        </style>
+
     </head>
+
     <body>
+        
+        <h1>🌱 Colheitas 🌱</h1>
+        <hr size="1" width="90%" color="#228B22">
+
+        <h2>Cadastro</h2>
         <p>
-            Você gostaria de se cadastrar como um comprador ou um vendedor?
+            Você gostaria de se cadastrar como comprador ou vendedor?
         </p>
-        <button type="button">  
+        <br>
+        <button class="button">  
             <a href="/accounts/signup/buyer/">Comprador</a>
         </button>
-        <button type="button">
+        <button class="button">
             <a href="/accounts/signup/seller/">Vendedor</a>
         </button>
-        <button type="button">
+        <p>
+        <button class="button">
             <a href="/">Voltar</a>
         </button>
+        </p>
+
+
+    <footer>
+        <br> <br>
+        <hr size="1" width="100%" color="#228B22">
+        <br>
+        Colheitas está debaixo da Licensa do MIT.
+        <br>
+        Copyright (c) 2022 ES-UFABC
+    </footer>
+
     </body>
 </html>
