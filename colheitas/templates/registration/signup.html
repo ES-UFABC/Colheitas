@@ -4,65 +4,57 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">        
-        <title>Colheitas 🌱 - Sign Up</title>
-
-        <style>
-            body {
-                text-align: center;
-            }
-
-            p {
-                font-size: 18px;
-            }
-
-            a {
-                font-size: 16px;
-                text-decoration: double;
-                color:#fff
-            }
-
-            button {
-                display: inline-block;
-                padding: 5px 15px;
-                font-size: 15px;
-                cursor: pointer;
-                text-align: center;	
-                color: #fff;
-                background-color: #228B22;
-                border: none;
-                border-radius: 100px;
-                box-shadow: 0 2px #999;
-            }
-
-            footer {
-                font-size: 13px;
-            }
-        </style>
+        <title>🌱 Colheitas - Cadastre-se</title>
+        <link rel="stylesheet" href="css/style.css">
 
     </head>
 
-    <body>
-        
-        <h1>🌱 Colheitas 🌱</h1>
-        <hr size="1" width="90%" color="#228B22">
+<body>
 
-        <h2>Cadastro</h2>
-        <p>
-            Você gostaria de se cadastrar como comprador ou vendedor?
-        </p>
-        <br>
-        <button class="button">  
-            <a href="/accounts/signup/buyer/">Comprador</a>
-        </button>
-        <button class="button">
-            <a href="/accounts/signup/seller/">Vendedor</a>
-        </button>
-        <p>
-        <button class="button">
-            <a href="/">Voltar</a>
-        </button>
-        </p>
+    <div id="boxHeader">
 
+        <div id="boxTitle">
+            <br>
+            <h1>🌱 Colheitas 🌱</h1>
+            <br>
+        </div>
+        <hr size="2" width="100%" color="#228B22">
+
+    </div>
+    
+    <div id="divide">
+        <div id="boxImg">
+    
+            <img src="img/agricultor.png" width="400px" vertical-align="middle" hor>
+    
+        </div>
+    
+        <div id="boxSignUp">
+            <h2>Cadastre-se</h2>
+            <br><br>
+            <p>Você gostaria de se cadastrar como comprador ou vendedor?</p>
+            <br>
+            <div class="buttons">
+                <button>  
+                    <a href="/accounts/signup/buyer/" class="button" type="button">Comprador</a>
+                </button>
+                <br>
+                <button>
+                    <a href="/accounts/signup/seller/" class="button" type="button">Vendedor</a>
+                </button>
+                <br>
+                <p>
+            </div>
+            <br>
+            <button>
+                <a href="/" class="button" type="button">Voltar</a>
+            </button>
+            </p>
+            
+    
+        </div>
+            
+    </div>
 
     <footer>
         <br> <br>
@@ -73,5 +65,7 @@
         Copyright (c) 2022 ES-UFABC
     </footer>
 
-    </body>
+
+</body>
+    
 </html>
