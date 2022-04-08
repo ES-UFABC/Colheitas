@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 MEASURE = (("1", "Und"), ("2", "L"), ("3", "g"), ("4", "Kg"))
-
+        
 
 class Typology(models.Model):
     id = models.AutoField(primary_key=True)

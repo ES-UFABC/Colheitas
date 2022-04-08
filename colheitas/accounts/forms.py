@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.db import transaction
 
 from localflavor.br.forms import BRStateChoiceField
-from .models import User, Seller, Product
+from .models import User, Seller # , Product
 
 class SellerSignUpForm(UserCreationForm):
     state = BRStateChoiceField()

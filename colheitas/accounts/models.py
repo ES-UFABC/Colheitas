@@ -2,8 +2,8 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from localflavor.br.models import BRStateField
 
-class Product(models.Model):
-  product_name = models.CharField(max_length=256)
+# class Product(models.Model):
+#   product_name = models.CharField(max_length=256)
 
 class User(AbstractUser):
   USER_TYPE_CHOICES = (
@@ -16,5 +16,5 @@ class User(AbstractUser):
 
 class Seller(models.Model):
   user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
-  products = models.ManyToManyField(Product) # TODO create product class later
+  products = models.ManyToManyField("products.Product")
     

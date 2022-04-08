@@ -1,9 +1,10 @@
 from multiprocessing import Event
-from django.shortcuts import redirect, render
-from numpy import product
+from django.shortcuts import redirect, render   
+# from numpy import product
 import pkg_resources
 
-from colheitas.accounts.models import Product
+# from colheitas.accounts.models import Product
+from .models import Product
 from .forms import ProductForm
 
 def delete_product(request, id):
