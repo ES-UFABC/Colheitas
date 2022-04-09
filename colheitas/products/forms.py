@@ -9,13 +9,13 @@ class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
 
-        typology = forms.ModelMultipleChoiceField(
-            queryset=Typology.objects.all().values('name'),
-            widget=forms.CheckboxSelectMultiple
+        # typology = forms.ModelMultipleChoiceField(
+        #     queryset=Typology.objects.all().values('name'),
+        #     widget=forms.CheckboxSelectMultiple
 
-        )
+        # )
 
-        fields = ('name', 'measure', 'typology', 'price')
+        fields = ('name', 'measure', 'price') # , 'typology')
 
 
     def __init__(self, *args, **kwargs):

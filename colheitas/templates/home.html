@@ -5,6 +5,7 @@
 
 {% block content %}
 {% if user.is_authenticated %}
+
   <p>
     Bem vindo a Colheitas {{ user.username }}! Este app ainda está sendo construído, então espere um pouco :)
   </p>
@@ -12,6 +13,15 @@
   <p>
     Estado: {{ user.state }}
   </p>
+  <p>
+    Tipo de usuário: {{ user.user_type }}
+  </p>
+
+  {% if user.user_type == 1%}
+    <button>
+      <a href="/products/register/" class="button" type="button">Registrar um produto</a>
+    </button>
+  {% endif %}
 
   <button type="button">
     <a href="{% url 'logout' %}">Sair</a>

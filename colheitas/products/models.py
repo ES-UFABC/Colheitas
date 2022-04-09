@@ -15,4 +15,4 @@ class Product(models.Model):
     name = models.CharField('Nome do Produto', max_length=200)
     price = models.FloatField('Preço', max_length=10)
     measure = models.IntegerField('Unidade de Medida')
-    typology = models.ForeignKey(Typology, on_delete=models.CASCADE)
+    # typology = models.ForeignKey(Typology, on_delete=models.CASCADE)
