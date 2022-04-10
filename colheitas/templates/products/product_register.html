@@ -9,10 +9,16 @@
         <p>
             Registre seu produto:
         </p>
-        {% crispy form form.helper %}
-        <button type="submit">Enviar</button>
-        <button type="produto">
-            <a href="/">Voltar</a>
-        </button>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Enviar</button>
+            <button type="produto">
+                <a href="/">Voltar</a>
+            </button>
+          </form>
+
+
     </body>
 </html>
