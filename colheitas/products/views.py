@@ -16,8 +16,7 @@ def delete_product(request, id):
         product_to_delete.delete()
         return redirect('product_delete.html')
     
-    return render(request, 'products/product_delete_confirmation.html', {'product': product})
-    #TODO Product_delete_confirmation, html simples para confirmar o delete
+    return render(request, 'delete_confirm.html', {'product': product_to_delete})
 
 # def product_register(request):
 #     if request.method == 'POST':
