@@ -18,17 +18,20 @@ class ProductRegisterForm(forms.ModelForm):
         # )
         fields = ('name', 'measure', 'price') # , 'typology')
 
-    # def __init__(self, *args, **kwargs):
-    #     super().__init__(*args, **kwargs)
-
-    #     self.helper = FormHelper
-    #     self.helper.form_method = 'post'
+    def __init__(self, *args, **kwargs):
+        # super().__init__(*args, **kwargs)
+        # self.helper = FormHelper
+        # self.helper.form_method = 'post'
+        self.request = kwargs.pop('request')
+        super(ProductRegisterForm, self).__init__(*args, **kwargs)
+        # self.fields['user'].queryset = Product.objects.filter(user=self.request.user)
+        
 
     def save(self):
         product = super().save(commit=False)
         product.name = self.cleaned_data['name']
         product.price = self.cleaned_data['price']
         # product.measure = self.cleaned_data['measure']
-
+        product.seller = self.request.user
         product.save()
         return product

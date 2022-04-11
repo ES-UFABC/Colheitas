@@ -35,6 +35,11 @@ class ProductRegisterView(generic.CreateView):
     success_url = reverse_lazy('/')
     template_name = 'products/product_register.html'
 
+    def get_form_kwargs(self):
+        kwargs = super(ProductRegisterView, self).get_form_kwargs()
+        kwargs['request'] = self.request
+        return kwargs
+
     def form_valid(self, form):
         product = form.save()
         return redirect('/')

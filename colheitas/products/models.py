@@ -19,3 +19,4 @@ class Product(models.Model):
     price = models.FloatField('Preço', max_length=10)
     measure = models.IntegerField('Unidade de Medida', choices=MEASURE)
     # typology = models.ForeignKey(Typology, on_delete=models.CASCADE)
+    seller = models.ForeignKey("accounts.User", on_delete=models.CASCADE)
