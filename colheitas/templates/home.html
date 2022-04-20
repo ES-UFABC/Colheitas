@@ -1,40 +1,128 @@
 <!-- templates/home.html-->
 {% extends 'base.html' %}
+{% load static %}
 
-{% block title %}Home{% endblock %}
+{% block title %}🌱 Colheitas - Home{% endblock %}
 
 {% block content %}
 {% if user.is_authenticated %}
 
-  <p>
-    Bem vindo a Colheitas {{ user.username }}! Este app ainda está sendo construído, então espere um pouco :)
-  </p>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">        
+      <title>🌱 Colheitas - Cadastre-se</title>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}" media="screen">
+    </head>
 
-  <p>
-    Estado: {{ user.state }}
-  </p>
-  <p>
-    Tipo de usuário: {{ user.user_type }}
-  </p>
+    <body>
 
-  {% if user.user_type == 1%}
-    <button>
-      <a href="/products/register/" class="button" type="button">Registrar um produto</a>
-    </button>
-  {% endif %}
+      <div id="boxHeader">
 
-  <button type="button">
-    <a href="{% url 'logout' %}">Sair</a>
-  </button>
+        <div id="boxTitle">
+            <br>
+            <h1>🌱 Colheitas 🌱</h1>
+            <br>
+        </div>
+        <hr size="2" width="100%" color="#228B22">
+
+      </div>
+
+      <div id="boxHome">
+        <br><br><br><br>
+        <center>
+        <p>
+          Bem vindo ao Colheitas {{ user.username }}! Este app ainda está sendo construído, então espere um pouco :)
+        </p>
+        <br>
+        <p>
+          Estado: {{ user.state }}
+        </p>
+        <br>     
+        <p>
+          Tipo de usuário: {{ user.user_type }}
+        </p>
+        <br>
+
+        {% if user.user_type == 1%}
+
+          <button>
+            <a href="/products/register/" class="button" type="button">Registrar um produto</a>
+          </button>
+
+        {% endif %}
+      
+          <button type="button">
+            <a href="{% url 'logout' %}">Sair</a>
+          </button>
+
+      </div>
+
+      <footer>
+        <hr size="1" width="100%" color="#228B22">
+        <br>
+        Colheitas está debaixo da Licensa do MIT.
+        <br>
+        Copyright (c) 2022 ES-UFABC
+      </footer>
+
+    </body>
+  </html>
 
 {% else %}
-  <p>Bem vindo à Colheitas, o serviço que conecta pequenos produtores agrícolas com consumidores de maneira rápida, fácil, e direta!</p>
-  <button type="button">
-    <a href="{% url 'login' %}">Entrar</a>
-  </button>
 
-  <button type="button">
-    <a href="{% url 'signup' %}">Cadastre-se</a>
-  </button>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">        
+      <title>🌱 Colheitas - Cadastre-se</title>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}" media="screen">
+    </head>
+
+    <body>
+
+      <div id="boxHeader">
+
+        <div id="boxTitle">
+            <br>
+            <h1>🌱 Colheitas 🌱</h1>
+            <br>
+        </div>
+        <hr size="2" width="100%" color="#228B22">
+      </div>
+
+      <div id="boxHome">
+        <br><br><br><br>
+        <center>
+        <h2> Bem Vindo!</h2>
+        <br>
+        <p>Nosso serviço conecta pequenos produtores agrícolas aos seus consumidores de maneira rápida, fácil e direta.</p>
+        <br>
+        <br>
+
+        <div class="buttonsHome">
+          <button type="button">
+            <a href="{% url 'login' %}">Entrar</a>
+          </button>
+          <br>
+          <button type="button">
+            <a href="{% url 'signup' %}">Cadastrar</a>
+          </button>
+        </div>
+
+        </center>
+      </div>
+
+      <footer>
+        <hr size="1" width="100%" color="#228B22">
+        <br>
+        Colheitas está debaixo da Licensa do MIT.
+        <br>
+        Copyright (c) 2022 ES-UFABC
+      </footer>
+
+    </body>
+  </html>
+
 {% endif %}
 {% endblock %}
