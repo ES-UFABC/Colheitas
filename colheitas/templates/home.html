@@ -82,7 +82,6 @@
     <body>
 
       <div id="boxHeader">
-
         <div id="boxTitle">
             <br>
             <h1>🌱 Colheitas 🌱</h1>
@@ -91,27 +90,33 @@
         <hr size="2" width="100%" color="#228B22">
       </div>
 
-      <div id="boxHome">
-        <br><br><br><br>
-        <center>
-        <h2> Bem Vindo!</h2>
-        <br>
-        <p>Nosso serviço conecta pequenos produtores agrícolas aos seus consumidores de maneira rápida, fácil e direta.</p>
-        <br>
-        <br>
+      <div id="divide">
 
-        <div class="buttonsHome">
-          <button type="button">
-            <a href="{% url 'login' %}">Entrar</a>
-          </button>
-          <br>
-          <button type="button">
-            <a href="{% url 'signup' %}">Cadastrar</a>
-          </button>
+        <div id="boxImg">
+    
+          <img src="{% static 'img/agricultor.png' %}" width="400px" vertical-align="middle">
+  
         </div>
 
-        </center>
+
+        <div id="boxSignUp">
+            <h2> Bem Vindo!</h2>
+            <br>
+            <p>Nosso serviço conecta pequenos produtores agrícolas aos seus consumidores de maneira rápida, fácil e direta.</p>
+            <br>
+    
+            <div class="buttons">
+              <button>
+                <a href="{% url 'login' %}" class="button" type="button">Entrar</a>
+              </button>
+              <br>
+              <button>
+                <a href="{% url 'signup' %}" class="button" type="button">Cadastrar</a>
+              </button>
+            </div>
+        </div>
       </div>
+
 
       <footer>
         <hr size="1" width="100%" color="#228B22">

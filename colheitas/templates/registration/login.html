@@ -32,16 +32,21 @@
       <center>
       <h2>Entrar</h2>
       <br>
-      <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
+
+      
+        <form method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <br>
+          <button type="submit">Entrar</button>
+        </form>
+
         <br>
-        <button type="submit">Entrar</button>
-      </form>
-      <br>
-      <button>
-        <a href="/" class="button" type="button">Voltar</a>
-      </button>
+        <button>
+          <a href="/" class="button" type="button">Voltar</a>
+        </button>
+
+
     </center>
     </div>
 
