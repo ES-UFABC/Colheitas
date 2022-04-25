@@ -11,10 +11,13 @@ class User(AbstractUser):
     (2, 'buyer'),
   )
   user_type = models.PositiveSmallIntegerField(choices=USER_TYPE_CHOICES)
+  user_class = models
   state = BRStateField(blank=True)
   REQUIRED_FIELDS = ['user_type']
 
 class Seller(models.Model):
   user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
-  # products = models.ManyToManyField("products.Product")
+  products = models.ManyToManyField("products.Product", related_name='+')
     
+# class Buyer(models.Model):
+#   user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
