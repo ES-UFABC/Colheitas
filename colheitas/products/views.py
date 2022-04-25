@@ -18,6 +18,16 @@ def delete_product(request, id):
     
     return render(request, 'delete_confirm.html', {'product': product_to_delete})
 
+def search_product(request):
+    if request.method == "POST":
+        searched = request.POST['searched']
+        products = Product.objects.filter(name__contains =searched)
+        return render(request, 'products/search_product.html', {'searched': searched, 'products': products})
+    else:
+        # todo redirecionar para 404
+        products = Product.objects.all()
+        return render(request, 'products/search_product.html', {'products': products})
+
 # def product_register(request):
 #     if request.method == 'POST':
 #         form = ProductRegisterForm(request.POST)

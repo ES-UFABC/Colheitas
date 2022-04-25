@@ -1,0 +1,28 @@
+{% load static %}
+
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+      <title>🌱 Colheitas - Produtos</title>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}" media="screen">
+    </head>
+
+    <body>
+
+      <div id="boxHeader">
+
+        <div id="boxTitle">
+            <br>
+            <h1>🌱 Colheitas 🌱</h1>
+            <br>
+        </div>
+        <hr size="2" width="100%" color="#228B22">
+        <!-- <div class="search">
+            <input type="text" placeholder="Search..">
+            <button type="button"><i class="button"></i></button>
+        </div> -->
+      </div>
+    {% block content%}
+    {% endblock %}
+    </body>

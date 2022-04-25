@@ -1,0 +1,18 @@
+{% extends 'products/base.html' %}
+
+{% block content%}
+    <div>
+        <br><br><br><br>
+        <center>
+            {%if searched%}
+                <h1> Você pesquisou por: {{ searched }}</h1>
+                <br/>
+            {% endif %}
+            {% if products %}
+                {% for p in products %}
+                    {{ p.name }} <br/>
+                {% endfor %}
+            {% endif %}
+        </center>
+    </div>
+{% endblock %}
