@@ -2,8 +2,8 @@ from multiprocessing import Event
 from django.shortcuts import redirect, render   
 from django.urls import reverse_lazy
 from django.views import generic
-# from numpy import product
 import pkg_resources
+from django.contrib.auth.mixins import UserPassesTestMixin
 
 # from colheitas.accounts.models import Product
 from .models import Product
@@ -27,7 +27,12 @@ def delete_product(request, id):
 #     form = ProductRegisterForm()
 #     return render(request, 'products/product_register.html', {'form': form})
 
-class ProductRegisterView(generic.CreateView):
+
+class ProductRegisterView(UserPassesTestMixin, generic.CreateView):
+
+    def test_func(self):
+        return self.request.user.user_type == 1
+
     model = Product
     form_class = ProductRegisterForm
 
