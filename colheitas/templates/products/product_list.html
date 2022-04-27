@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Lista de produtos</h1>
+  {% if product_list %}
+  <ul>
+    {% for product in product_list %}
+      <li>
+        {{ product.name }}, {{ product.quantity }} {{ product.get_measure_display }} - R${{product.price}}
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>Você ainda não cadastrou nenhum produto</p>
+  {% endif %}
+  <button type="produto">
+    <a href="/">Voltar</a>
+</button>
+{% endblock %}

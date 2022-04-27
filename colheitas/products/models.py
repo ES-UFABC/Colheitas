@@ -18,6 +18,7 @@ class Product(models.Model):
     name = models.CharField('Nome do Produto', max_length=200)
     price = models.FloatField('Preço', max_length=10)
     measure = models.IntegerField('Unidade de Medida', choices=MEASURE)
+    quantity = models.FloatField('Quantidade', max_length=10)
     # typology = models.ForeignKey(Typology, on_delete=models.CASCADE)
     # seller = models.ForeignKey("accounts.User", on_delete=models.CASCADE)
     seller = models.ForeignKey("accounts.Seller", on_delete=models.CASCADE)

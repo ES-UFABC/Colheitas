@@ -42,3 +42,14 @@ class ProductRegisterView(generic.CreateView):
     def form_valid(self, form):
         product = form.save()
         return redirect('/')
+
+class ProductsListSeller(generic.ListView):
+    model = Product
+    
+    def get_queryset(self):
+        queryset = Product.objects.filter(seller=self.request.user.seller)
+        return queryset
+   
+#    def get_queryset(self):
+#        seller = self.request.user.seller
+#        products = seller.products
