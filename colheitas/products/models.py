@@ -1,4 +1,5 @@
 from django.db import models
+from localflavor.br.models import BRStateField
 
 # Create your models here.      
 class Typology(models.Model):
@@ -22,3 +23,4 @@ class Product(models.Model):
     # typology = models.ForeignKey(Typology, on_delete=models.CASCADE)
     # seller = models.ForeignKey("accounts.User", on_delete=models.CASCADE)
     seller = models.ForeignKey("accounts.Seller", on_delete=models.CASCADE)
+    state = BRStateField(blank=True)

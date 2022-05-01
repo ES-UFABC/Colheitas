@@ -18,16 +18,6 @@ def delete_product(request, id):
     
     return render(request, 'delete_confirm.html', {'product': product_to_delete})
 
-# def product_register(request):
-#     if request.method == 'POST':
-#         form = ProductRegisterForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-
-#     form = ProductRegisterForm()
-#     return render(request, 'products/product_register.html', {'form': form})
-
-
 class ProductRegisterView(UserPassesTestMixin, generic.CreateView):
 
     def test_func(self):
@@ -50,7 +40,8 @@ class ProductRegisterView(UserPassesTestMixin, generic.CreateView):
 
 class ProductsListSeller(generic.ListView):
     model = Product
-    
+    template_name = 'products/product_list_seller.html'
+
     def get_queryset(self):
         queryset = Product.objects.filter(seller=self.request.user.seller)
         return queryset
@@ -59,6 +50,10 @@ def product_detail(request, id):
     product = Product.objects.get(id=id)
     return render(request, 'products/product_detail.html', {'product':product})
    
-#    def get_queryset(self):
-#        seller = self.request.user.seller
-#        products = seller.products
+class ProductListState(generic.ListView):
+    model = Product
+    template_name = 'products/product_list_state.html'
+    
+    def get_queryset(self):
+        queryset = Product.objects.filter(state=self.request.user.state)
+        return queryset
