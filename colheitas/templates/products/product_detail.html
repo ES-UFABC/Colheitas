@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Produto</h2>
+    <p>
+        Nome: {{ product.name }}
+    </p>
+    <p>
+        Quantidade: {{ product.quantity }} {{ product.get_measure_display }}
+    </p>
+    <p>
+        Preço: R$ {{product.price}}
+    </p>
+    <button type="produto">
+        <a href="/products/products/">Voltar</a>
+    </button>
+{% endblock %}

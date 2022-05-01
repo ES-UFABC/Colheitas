@@ -6,7 +6,7 @@
   <ul>
     {% for product in product_list %}
       <li>
-        {{ product.name }}, {{ product.quantity }} {{ product.get_measure_display }} - R${{product.price}}
+        <a href="{% url 'product_detail' product.id %}">{{ product.name }}</a>, {{ product.quantity }} {{ product.get_measure_display }} - R${{product.price}}
       </li>
     {% endfor %}
   </ul>
@@ -15,5 +15,5 @@
   {% endif %}
   <button type="produto">
     <a href="/">Voltar</a>
-</button>
+  </button>
 {% endblock %}

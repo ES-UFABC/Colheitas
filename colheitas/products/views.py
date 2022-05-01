@@ -54,6 +54,10 @@ class ProductsListSeller(generic.ListView):
     def get_queryset(self):
         queryset = Product.objects.filter(seller=self.request.user.seller)
         return queryset
+
+def product_detail(request, id):
+    product = Product.objects.get(id=id)
+    return render(request, 'products/product_detail.html', {'product':product})
    
 #    def get_queryset(self):
 #        seller = self.request.user.seller
