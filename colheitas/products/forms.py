@@ -16,7 +16,7 @@ class ProductRegisterForm(forms.ModelForm):
         #     widget=forms.CheckboxSelectMultiple
 
         # )
-        fields = ('name', 'measure', 'price') # , 'typology')
+        fields = ('name', 'quantity', 'measure', 'price') # , 'typology')
 
     def __init__(self, *args, **kwargs):
         # super().__init__(*args, **kwargs)
@@ -32,6 +32,7 @@ class ProductRegisterForm(forms.ModelForm):
         product.name = self.cleaned_data['name']
         product.price = self.cleaned_data['price']
         # product.measure = self.cleaned_data['measure']
-        product.seller = self.request.user
+        product.quantity = self.cleaned_data['quantity']
+        product.seller = self.request.user.seller
         product.save()
         return product

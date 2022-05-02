@@ -7,6 +7,7 @@ from django.shortcuts import redirect
 
 from ..forms import SellerSignUpForm
 from ..models import User, Seller
+from products.models import Product
 
 class SellerSignUpView(generic.CreateView):
     model = User
@@ -23,3 +24,11 @@ class SellerSignUpView(generic.CreateView):
         user = form.save()
         login(self.request, user)
         return redirect('/accounts/login/')
+
+class SellerProductsList(generic.ListView):
+    model = Seller
+    queryset = Seller.products
+   
+#    def get_queryset(self):
+#        seller = self.request.user.seller
+#        products = seller.products

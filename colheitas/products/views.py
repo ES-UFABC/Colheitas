@@ -2,8 +2,8 @@ from multiprocessing import Event
 from django.shortcuts import redirect, render   
 from django.urls import reverse_lazy
 from django.views import generic
-# from numpy import product
 import pkg_resources
+from django.contrib.auth.mixins import UserPassesTestMixin
 
 # from colheitas.accounts.models import Product
 from .models import Product
@@ -37,7 +37,12 @@ def search_product(request):
 #     form = ProductRegisterForm()
 #     return render(request, 'products/product_register.html', {'form': form})
 
-class ProductRegisterView(generic.CreateView):
+
+class ProductRegisterView(UserPassesTestMixin, generic.CreateView):
+
+    def test_func(self):
+        return self.request.user.user_type == 1
+
     model = Product
     form_class = ProductRegisterForm
 
@@ -52,3 +57,18 @@ class ProductRegisterView(generic.CreateView):
     def form_valid(self, form):
         product = form.save()
         return redirect('/')
+
+class ProductsListSeller(generic.ListView):
+    model = Product
+    
+    def get_queryset(self):
+        queryset = Product.objects.filter(seller=self.request.user.seller)
+        return queryset
+
+def product_detail(request, id):
+    product = Product.objects.get(id=id)
+    return render(request, 'products/product_detail.html', {'product':product})
+   
+#    def get_queryset(self):
+#        seller = self.request.user.seller
+#        products = seller.products
