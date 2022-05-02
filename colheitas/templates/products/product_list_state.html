@@ -6,7 +6,7 @@
   <ul>
     {% for product in product_list %}
       <li>
-        <a href="{% url 'product_detail' product.id %}">{{ product.name }}</a>, {{ product.quantity }} {{ product.get_measure_display }} - R${{product.price}}
+        <a href="{% url 'product_detail' product.id %}">{{ product.name }}</a>, {{ product.quantity }} {{ product.get_measure_display }} - R${{product.price}}: <a href="{% url 'seller_profile' product.seller.user.id %}">{{ product.seller.user.first_name }}</a>
       </li>
     {% endfor %}
   </ul>

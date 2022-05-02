@@ -12,7 +12,7 @@
         Preço: R$ {{product.price}}
     </p>
     <p>
-        Vendedor: {{ product.seller.user.first_name }} {{ product.seller.user.last_name }}
+        Vendedor: <a href="{% url 'seller_profile' product.seller.user.id %}">{{ product.seller.user.first_name }} {{ product.seller.user.last_name }}</a>
     </p>
 
     {% if user.user_type == 1%}
