@@ -9,9 +9,13 @@
                 <br/>
             {% endif %}
             {% if products %}
+            <ul>
                 {% for p in products %}
-                    {{ p.name }} <br/>
+                    <li>
+                    <a href="{% url 'product_detail' product.id %}">{{ product.name }}</a>, {{ product.quantity }} {{ product.get_measure_display }} - R${{product.price}}
+                    </li>
                 {% endfor %}
+            </ul>
             {% endif %}
         </center>
     </div>

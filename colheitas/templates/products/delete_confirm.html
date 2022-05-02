@@ -9,8 +9,12 @@
 <body>
     <form>
         {% csrf_token %}
-        <h2> Tem certeza que deseja deletar o produto {{product_to_delete.name}} ?</h2>
-        <button type="submit"> Confirmar </button>
+        <h2> Tem certeza que deseja deletar o produto {{product.name}} ?</h2>
+        <button type="submit">
+            <a href="{% url 'delete_product' product.id %}">
+            Confirmar
+            </a>
+        </button>
     </form>
 </body>
 </html>

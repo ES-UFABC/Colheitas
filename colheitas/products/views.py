@@ -11,12 +11,8 @@ from .forms import ProductRegisterForm
 
 def delete_product(request, id):
     product_to_delete = Product.objects.get(id=id)
-    
-    if request.method == 'POST':
-        product_to_delete.delete()
-        return redirect('product_delete.html')
-    
-    return render(request, 'delete_confirm.html', {'product': product_to_delete})
+    product_to_delete.delete()
+    return redirect('seller_products')
 
 def search_product(request):
     if request.method == "POST":
@@ -68,6 +64,10 @@ class ProductsListSeller(generic.ListView):
 def product_detail(request, id):
     product = Product.objects.get(id=id)
     return render(request, 'products/product_detail.html', {'product':product})
+
+def delete_confirm(request, id):
+    product = Product.objects.get(id=id)
+    return render(request, 'products/delete_confirm.html', {'product':product})
    
 #    def get_queryset(self):
 #        seller = self.request.user.seller
