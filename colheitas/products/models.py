@@ -1,6 +1,9 @@
 from django.db import models
 
-# Create your models here.      
+# Create your models here.
+from localflavor.br.models import BRStateField
+
+
 class Typology(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField('Tipologia', max_length=200)
