@@ -36,11 +36,11 @@
         </p>
         <br>
         <p>
-          Estado: {{ user.state }}
+          Estado: {{ user.get_state_display }}
         </p>
         <br>     
         <p>
-          Tipo de usuário: {{ user.user_type }}
+          Tipo de usuário: {{ user.get_user_type_display }}
         </p>
         <br>
 
@@ -56,9 +56,13 @@
 
         {% endif %}
       
-          <button type="button">
-            <a href="{% url 'logout' %}">Sair</a>
-          </button>
+        <button>
+          <a href="/products/products/state" class="button" type="button">Produtos em seu estado</a>
+        </button>
+
+        <button type="button">
+          <a href="{% url 'logout' %}">Sair</a>
+        </button>
 
       </div>
 

@@ -56,9 +56,18 @@ class ProductRegisterView(UserPassesTestMixin, generic.CreateView):
 
 class ProductsListSeller(generic.ListView):
     model = Product
-    
+    template_name = 'products/product_list_seller.html'
+
     def get_queryset(self):
         queryset = Product.objects.filter(seller=self.request.user.seller)
+        return queryset
+
+class ProductListState(generic.ListView):
+    model = Product
+    template_name = 'products/product_list_state.html'
+
+    def get_queryset(self):
+        queryset = Product.objects.filter(state=self.request.user.state)
         return queryset
 
 def product_detail(request, id):
@@ -68,7 +77,7 @@ def product_detail(request, id):
 def delete_confirm(request, id):
     product = Product.objects.get(id=id)
     return render(request, 'products/delete_confirm.html', {'product':product})
-   
+
 #    def get_queryset(self):
 #        seller = self.request.user.seller
 #        products = seller.products

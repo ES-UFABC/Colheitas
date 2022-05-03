@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Vendedor</h2>
+    <p>
+        Username: {{ seller.user.username }}
+    </p>
+    <p>
+        Vendedor: {{ seller.user.first_name }} {{ seller.user.last_name }}
+    </p>
+    <p>
+        Estado: {{ seller.user.get_state_display }}
+    </p>
+    <p>
+        Contato: {{ seller.user.email }}
+    </p>
+    <button type="voltar">
+        <a href="/products/products/state">Voltar</a>
+    </button>
+{% endblock %}

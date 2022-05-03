@@ -3,7 +3,7 @@ from django.urls import reverse_lazy
 from django.views import generic
 
 from django.contrib.auth import login
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 
 from ..forms import SellerSignUpForm
 from ..models import User, Seller
@@ -15,10 +15,6 @@ class SellerSignUpView(generic.CreateView):
     
     success_url = reverse_lazy("login")
     template_name = "registration/signup_seller.html"
-
-    # def get_context_data(self, **kwargs):
-    #     kwargs['user_type'] = 'seller'
-    #     return super().get_context_data(**kwargs)
     
     def form_valid(self, form):
         user = form.save()
@@ -29,6 +25,6 @@ class SellerProductsList(generic.ListView):
     model = Seller
     queryset = Seller.products
    
-#    def get_queryset(self):
-#        seller = self.request.user.seller
-#        products = seller.products
+def seller_profile(request, id):
+    seller = Seller.objects.get(user_id=id)
+    return render(request, 'profile.html', {'seller':seller})

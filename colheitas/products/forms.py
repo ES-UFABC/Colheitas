@@ -34,5 +34,6 @@ class ProductRegisterForm(forms.ModelForm):
         # product.measure = self.cleaned_data['measure']
         product.quantity = self.cleaned_data['quantity']
         product.seller = self.request.user.seller
+        product.state = self.request.user.state
         product.save()
         return product

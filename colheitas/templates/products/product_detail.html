@@ -11,7 +11,21 @@
     <p>
         Preço: R$ {{product.price}}
     </p>
-    <button type="produto">
-        <a href="/products/products/">Voltar</a>
-    </button>
+    <p>
+        Vendedor: <a href="{% url 'seller_profile' product.seller.user.id %}">{{ product.seller.user.first_name }} {{ product.seller.user.last_name }}</a>
+    </p>
+
+    {% if user.user_type == 1%}
+    
+        <button type="produto">
+            <a href="/products/products/">Voltar</a>
+        </button>
+    
+    {% elif user.user_type == 2%}
+    
+        <button type="produto">
+            <a href="/products/products/state/">Voltar</a>
+        </button>
+        
+    {% endif %}
 {% endblock %}

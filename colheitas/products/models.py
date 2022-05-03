@@ -22,3 +22,4 @@ class Product(models.Model):
     # typology = models.ForeignKey(Typology, on_delete=models.CASCADE)
     # seller = models.ForeignKey("accounts.User", on_delete=models.CASCADE)
     seller = models.ForeignKey("accounts.Seller", on_delete=models.CASCADE, default=1)
+    state = BRStateField(blank=True)
