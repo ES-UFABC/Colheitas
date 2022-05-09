@@ -3,6 +3,10 @@ from crispy_forms.helper import FormHelper
 from crispy_forms.layout import  Layout, Submit
 from .models import Product, Typology
 
+class ProductForm(forms.ModelForm):
+    class Meta:
+        model = Product
+        fields = ('name', 'quantity', 'measure', 'price')
 
 class ProductRegisterForm(forms.ModelForm):
     name = forms.CharField(required=True, max_length=200)
