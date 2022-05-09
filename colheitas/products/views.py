@@ -7,7 +7,13 @@ from django.contrib.auth.mixins import UserPassesTestMixin
 
 # from colheitas.accounts.models import Product
 from .models import Product
-from .forms import ProductRegisterForm
+from .forms import ProductRegisterForm,ProductForm
+
+def update_product(request,id):
+    product_to_update = Product.objects.get(id=id)
+    form = ProductForm(request.POST or None, instance=product_to_update)
+    return render(request, 'products-form.html', {'form': form, 'product': product_to_update})
+
 
 def delete_product(request, id):
     product_to_delete = Product.objects.get(id=id)
