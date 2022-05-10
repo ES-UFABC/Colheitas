@@ -1,6 +1,12 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
+<html>
+  <!-- <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">        
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" media="screen">
+  </head> -->
   <h1>Lista de produtos no seu estado: {{ user.get_state_display }}</h1>
   {% if product_list %}
   <ul>
@@ -16,4 +22,5 @@
   <button type="produto">
     <a href="/">Voltar</a>
   </button>
+</html>
 {% endblock %}

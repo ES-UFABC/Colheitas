@@ -12,7 +12,10 @@ from .forms import ProductRegisterForm,ProductForm
 def update_product(request,id):
     product_to_update = Product.objects.get(id=id)
     form = ProductForm(request.POST or None, instance=product_to_update)
-    return render(request, 'products-form.html', {'form': form, 'product': product_to_update})
+    if form.is_valid():
+        form.save()
+        return redirect('/products/products/')
+    return render(request, 'products/products_form.html', {'form': form, 'product': product_to_update})
 
 
 def delete_product(request, id):
