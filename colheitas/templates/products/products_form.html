@@ -1,20 +1,48 @@
 {% load crispy_forms_tags %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>update_product</title>
-</head>
-<body>
 
-    <h1>Update a product</h1>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Salvar</button>
-    </form>
-    
-</body>
-</html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">        
+      <title>🌱 Colheitas - Atualizar Produtos</title>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}" media="screen">
+    </head>
+
+    <body>
+
+      <div id="boxHeader">
+        <div id="boxTitle">
+            <br>
+            <h1>🌱 Colheitas 🌱</h1>
+            <br>
+        </div>
+        <hr size="2" width="100%" color="#228B22">
+      </div>
+
+      <div>
+	  <br><br><br><br>
+      <center>
+
+      <h2>Atualizar um produto</h2>
+      <br>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <br>
+            <button type="submit">Salvar</button>
+            <br>
+        </form>
+    </center>
+      </div>
+
+      <footer>
+        <hr size="1" width="100%" color="#228B22">
+        <br>
+        Colheitas está debaixo da Licensa do MIT.
+        <br>
+        Copyright (c) 2022 ES-UFABC
+      </footer>
+
+    </body>
+  </html>

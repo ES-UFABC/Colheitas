@@ -1,31 +1,71 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h2>Produto</h2>
-    <p>
-        Nome: {{ product.name }}
-    </p>
-    <p>
-        Quantidade: {{ product.quantity }} {{ product.get_measure_display }}
-    </p>
-    <p>
-        Preço: R$ {{product.price}}
-    </p>
-    <p>
-        Vendedor: <a href="{% url 'seller_profile' product.seller.user.id %}">{{ product.seller.user.first_name }} {{ product.seller.user.last_name }}</a>
-    </p>
 
-    {% if user.user_type == 1%}
-    
-        <button type="produto">
-            <a href="/products/products/">Voltar</a>
-        </button>
-    
-    {% elif user.user_type == 2%}
-    
-        <button type="produto">
-            <a href="/products/products/state/">Voltar</a>
-        </button>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">        
+      <title>🌱 Colheitas - Detalhes dos Produtos</title>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}" media="screen">
+    </head>
+
+    <body>
+
+      <div id="boxHeader">
+        <div id="boxTitle">
+            <br>
+            <h1>🌱 Colheitas 🌱</h1>
+            <br>
+        </div>
+        <hr size="2" width="100%" color="#228B22">
+      </div>
+
+      <div>
+	  <br><br><br><br>
+        <center>
+        <h2>Produto</h2>
+        <br>
+        <p>
+            Nome: {{ product.name }}
+        </p>
+        <p>
+            Quantidade: {{ product.quantity }} {{ product.get_measure_display }}
+        </p>
+        <p>
+            Preço: R$ {{product.price}}
+        </p>
+        <p>
+            Vendedor: <a href="{% url 'seller_profile' product.seller.user.id %}">{{ product.seller.user.first_name }} {{ product.seller.user.last_name }}</a>
+        </p>
+        <br>
+
+        {% if user.user_type == 1%}
         
-    {% endif %}
+            <button type="produto">
+                <a href="/products/products/">Voltar</a>
+            </button>
+            <br>
+        
+        {% elif user.user_type == 2%}
+        
+            <button type="produto">
+                <a href="/products/products/state/">Voltar</a>
+            </button>
+            
+        {% endif %}
+        <br>
+        </center>
+      </div>
+
+      <footer>
+        <hr size="1" width="100%" color="#228B22">
+        <br>
+        Colheitas está debaixo da Licensa do MIT.
+        <br>
+        Copyright (c) 2022 ES-UFABC
+      </footer>
+
+    </body>
+  </html>
 {% endblock %}

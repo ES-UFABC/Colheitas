@@ -1,26 +1,60 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+
 <html>
-  <!-- <head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">        
+    <title>🌱 Colheitas - Lista de Produtos</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}" media="screen">
-  </head> -->
-  <h1>Lista de produtos no seu estado: {{ user.get_state_display }}</h1>
-  {% if product_list %}
-  <ul>
-    {% for product in product_list %}
-      <li>
-        <a href="{% url 'product_detail' product.id %}">{{ product.name }}</a>, {{ product.quantity }} {{ product.get_measure_display }} - R${{product.price}}: <a href="{% url 'seller_profile' product.seller.user.id %}">{{ product.seller.user.first_name }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-  {% else %}
-    <p>Não há nenhum produto no seu estado por enquanto :(</p>
-  {% endif %}
-  <button type="produto">
-    <a href="/">Voltar</a>
-  </button>
+  </head>
+
+  <body>
+
+    <div id="boxHeader">
+      <div id="boxTitle">
+          <br>
+          <h1>🌱 Colheitas 🌱</h1>
+          <br>
+      </div>
+      <hr size="2" width="100%" color="#228B22">
+    </div>
+
+    <div>
+    <br><br><br><br>
+    <center>
+
+      <h2>Lista de produtos no seu estado: {{ user.get_state_display }}</h2>
+      <br>
+      {% if product_list %}
+      <ul>
+        {% for product in product_list %}
+          <li>
+            <a href="{% url 'product_detail' product.id %}">{{ product.name }}</a>, {{ product.quantity }} {{ product.get_measure_display }} - R${{product.price}}: <a href="{% url 'seller_profile' product.seller.user.id %}">{{ product.seller.user.first_name }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+        <p>Não há nenhum produto no seu estado por enquanto.</p>
+      {% endif %}
+      <br>
+      <button type="produto">
+        <a href="/">Voltar</a>
+      </button>
+      <br>
+    </center>
+    </div>
+
+    <footer>
+      <hr size="1" width="100%" color="#228B22">
+      <br>
+      Colheitas está debaixo da Licensa do MIT.
+      <br>
+      Copyright (c) 2022 ES-UFABC
+    </footer>
+
+  </body>
 </html>
+
 {% endblock %}
