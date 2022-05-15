@@ -61,6 +61,33 @@ html, body {
     font-size: 24px;
 }
 
+#searchBox {
+    text-align: center;
+    width: 100%;
+}
+
+#search {
+    margin-right: auto;
+    margin-left: auto;
+    display: inline-block;
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+}
+
+#searchBox button {
+  padding: 7px;
+  margin-top: 8px;
+  margin-right: 16px;
+  color: #fff;
+  background-color: #228B22;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 0px;
+}
+
 p {
     font-size: 24px;
 }
@@ -94,6 +121,11 @@ button {
 a {
     font-size: 20px;
     text-decoration: double;
+}
+
+button a {
+    font-size: 20px;
+    text-decoration: double;
     color:#fff
 }
 
@@ -104,13 +136,4 @@ footer {
     bottom: 0;
     width: 100%;
     margin-bottom: 10px;
-}
-
-.search input[type=text] {
-  float: right;
-  padding: 6px;
-  border: none;
-  margin-top: 8px;
-  margin-right: 16px;
-  font-size: 17px;
 }

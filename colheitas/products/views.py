@@ -26,10 +26,9 @@ def delete_product(request, id):
 def search_product(request):
     if request.method == "POST":
         searched = request.POST['searched']
-        products = Product.objects.filter(name__contains =searched)
+        products = Product.objects.filter(name__contains=searched)
         return render(request, 'products/search_product.html', {'searched': searched, 'products': products})
     else:
-        # todo redirecionar para 404
         products = Product.objects.all()
         return render(request, 'products/search_product.html', {'products': products})
 

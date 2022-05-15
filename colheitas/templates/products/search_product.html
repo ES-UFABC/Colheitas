@@ -1,5 +1,5 @@
-{% extends 'products/base.html' %}
-
+{% extends 'base.html' %}
+{% load static %}
 {% block content%}
 
 <html>
@@ -12,15 +12,6 @@
 
     <body>
 
-      <div id="boxHeader">
-        <div id="boxTitle">
-            <br>
-            <h1>🌱 Colheitas 🌱</h1>
-            <br>
-        </div>
-        <hr size="2" width="100%" color="#228B22">
-      </div>
-
       <div>
 	  <br><br><br><br>
         <center>
@@ -32,7 +23,7 @@
             <ul>
                 {% for p in products %}
                     <li>
-                    <a href="{% url 'product_detail' product.id %}">{{ product.name }}</a>, {{ product.quantity }} {{ product.get_measure_display }} - R${{product.price}}
+                    <a>{{ p.name }}</a>, {{ p.quantity }} {{ p.get_measure_display }} - R${{p.price}}
                     </li>
                 {% endfor %}
             </ul>

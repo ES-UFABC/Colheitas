@@ -6,6 +6,27 @@
   <title>{% block title %}Colheitas{% endblock %}</title>
 </head>
 <body>
+      <div id="boxHeader">
+
+        <div id="boxTitle">
+            <br>
+            <h1>🌱 Colheitas 🌱</h1>
+            <br>
+        </div>
+        <hr size="2" width="100%" color="#228B22">
+      </div>
+{% if user.is_authenticated %}
+      <br><br>
+      <div id="searchBox">
+        <form method = "POST" action="{% url 'search_product' %}">
+          {% csrf_token %}
+          <input type="search" id="search" placeholder="Search" name="searched"/>
+          <button type="submit">
+            Pesquisar
+          </button>
+        </form>
+      </div>
+{% endif %}
   <main>
     {% block content %}
     {% endblock %}
