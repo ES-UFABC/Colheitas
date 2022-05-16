@@ -16,10 +16,10 @@
     </head>
 
     <body>
-
+    <div id="boxHomeDad">
+      <center>
       <div id="boxHome">
         <br><br><br><br>
-        <center>
         <p>
           Bem vindo ao Colheitas {{ user.username }}! Este app ainda está sendo construído, então espere um pouco :)
         </p>
@@ -32,36 +32,31 @@
           Tipo de usuário: {{ user.get_user_type_display }}
         </p>
         <br>
-
+      </div>
+      <div>
         {% if user.user_type == 1%}
 
-          <button>
+          <button class="buttonRound">
             <a href="/products/register/" class="button" type="button">Registrar um produto</a>
           </button>
 
-          <button>
+          <button class="buttonRound">
             <a href="/products/products/" class="button" type="button">Seus produtos</a>
           </button>
 
         {% endif %}
-      
-        <button>
+
+        <button class="buttonRound">
           <a href="/products/products/state" class="button" type="button">Produtos em seu estado</a>
         </button>
-
-        <button type="button">
+      </div>
+      <div style="margin-top:2em">
+        <button type="button" >
           <a href="{% url 'logout' %}">Sair</a>
         </button>
+      </div>
         </center>
       </div>
-
-      <footer>
-        <hr size="1" width="100%" color="#228B22">
-        <br>
-        Colheitas está debaixo da Licensa do MIT.
-        <br>
-        Copyright (c) 2022 ES-UFABC
-      </footer>
 
     </body>
   </html>
@@ -77,7 +72,6 @@
     </head>
 
     <body>
-
 
       <div id="divide">
 
@@ -105,14 +99,6 @@
         </div>
       </div>
 
-
-      <footer>
-        <hr size="1" width="100%" color="#228B22">
-        <br>
-        Colheitas está debaixo da Licensa do MIT.
-        <br>
-        Copyright (c) 2022 ES-UFABC
-      </footer>
 
     </body>
   </html>

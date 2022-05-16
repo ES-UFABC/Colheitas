@@ -1,6 +1,7 @@
+{% extends 'base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
+{% block content %}
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -10,15 +11,6 @@
       </head>
 
     <body>
-
-        <div id="boxHeader">
-            <div id="boxTitle">
-                <br>
-                <h1>🌱 Colheitas 🌱</h1>
-                <br>
-            </div>
-            <hr size="2" width="100%" color="#228B22">
-        </div>
 
         <div>
             <br><br><br><br>
@@ -41,13 +33,7 @@
 
         </div>
 
-        <footer>
-        <hr size="1" width="100%" color="#228B22">
-        <br>
-        Colheitas está debaixo da Licensa do MIT.
-        <br>
-        Copyright (c) 2022 ES-UFABC
-        </footer>
 
     </body>
 </html>
+{% endblock %}

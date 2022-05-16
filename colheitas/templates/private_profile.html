@@ -9,25 +9,32 @@
 </head>
 <br>
 <div class = "box">
+{% if user.user_type == 1%}
     <h2>Vendedor</h2>
+{% else %}
+    <h2>Comprador</h2>
+{% endif %}
     <p>
-        Username: {{ seller.user.username }}
+        Username: {{ account.username }}
     </p>
     <br>
     <p>
-        Vendedor: {{ seller.user.first_name }} {{ seller.user.last_name }}
+        Nome: {{ account.first_name }} {{ account.last_name }}
     </p>
     <br>
     <p>
-        Estado: {{ seller.user.get_state_display }}
+        Estado: {{ account.get_state_display }}
     </p>
     <br>
     <p>
-        Contato: {{ seller.user.email }}
+        Contato: {{ account.email }}
     </p>
     <br>
-    <button type="voltar">
-        <a href="/products/products/state">Voltar</a>
+    <button type="submit" class = "buttonRound">
+              <a href="{% url 'update_account' user.id %}">Editar</a>
+    </button>
+    <button type="voltar" class = "buttonRound">
+        <a href="/">Voltar</a>
     </button>
 </div>
 {% endblock %}

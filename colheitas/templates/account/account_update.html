@@ -6,31 +6,30 @@
 <html>
     <head>
       <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">        
-      <title>🌱 Colheitas - Atualizar Produtos</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+      <title>🌱 Colheitas - Atualizar Informações</title>
       <link rel="stylesheet" href="{% static 'css/style.css' %}" media="screen">
     </head>
 
     <body>
 
-      <div>
+      <div class="box">
 	  <br><br><br><br>
-      <center>
 
-      <h2>Atualizar um produto</h2>
+      <h2>Atualizar um suas informações</h2>
       <br>
         <form method="POST">
             {% csrf_token %}
-            {{ form.as_p }}
+            <table>
+              {{ form.as_table }}
+            </table>
             <br>
-            <button type="submit">Salvar</button>
-            <br>
-            <button type="produto">
+            <button type="submit" class="buttonRound">Salvar</button>
+            <button type="info" class="buttonRound">
                 <a href="/">Voltar</a>
             </button>
             <br>
         </form>
-    </center>
       </div>
 
 

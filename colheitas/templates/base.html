@@ -17,19 +17,31 @@
       </div>
 {% if user.is_authenticated %}
       <br><br>
-      <div id="searchBox">
-        <form method = "POST" action="{% url 'search_product' %}">
-          {% csrf_token %}
-          <input type="search" id="search" placeholder="Search" name="searched"/>
-          <button type="submit">
-            Pesquisar
-          </button>
-        </form>
-      </div>
+          <div class="searchBox">
+              <button type="submit" class="buttonRound">
+                <a href="{% url 'private_profile' user.id %}">Perfil</a>
+              </button>
+            <form method = "POST" action="{% url 'search_product' %}">
+              {% csrf_token %}
+              <input type="search" id="search" placeholder="Search" name="searched"/>
+              <button type="submit">
+                Pesquisar
+              </button>
+            </form>
+          </div>
+
 {% endif %}
   <main>
     {% block content %}
     {% endblock %}
   </main>
+
+<footer>
+        <hr size="1" width="100%" color="#228B22">
+        <br>
+        Colheitas está debaixo da Licensa do MIT.
+        <br>
+        Copyright (c) 2022 ES-UFABC
+      </footer>
 </body>
 </html>

@@ -64,3 +64,8 @@ class BuyerSignUpForm(UserCreationForm):
 
         user.save()
         return user
+
+class AccountForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ('first_name', 'last_name', 'email', 'state')
